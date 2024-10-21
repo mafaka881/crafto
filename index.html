@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Імбирні пряники ручної роботи на заказ. Crafto-пряник</title>
+    <link rel="stylesheet" href="/css/slick.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="top_wrapper">
+                <div class="logo">
+                    <a href="/">
+                        <img src="/image/logo.svg" alt="logo">
+                    </a> 
+                    <div class="logo_text">
+                        <a href="/">
+                            <h3>Crafto</h3>
+                        </a>
+                        <p>пряник</p>      
+                    </div>                                    
+                </div>
+                                
+                <nav class="nav">
+                    <ul class="ul_nav">
+                        <li class="li_nav"><a href="#">Продукція</a></li>                    
+                        <li class="li_nav"><a href="#">Пряники <i class="fa fa-angle-down"></i></a>
+                            <!-- <ul class="submenu">
+                                <li><a href="#">Item 1</a></li>
+                                <li><a href="#">Item 2</a></li>
+                              </ul> -->
+                        </li>                        
+                        <li class="li_nav"><a href="#">Відгуки</a></li>
+                        <li class="li_nav"><a href="dostavka.html">Оплата та доставка</a></li>                        
+                    </ul>
+                </nav>                
+                <div class="social-block">
+                    <div class="tel-block">
+                        <a href="tel:+380661389781" class="telephone">+38 (066) 138 97 81</a>
+                    </div>
+                    <ul class="social-menu">
+                        <li class="social-viber"><a href="viber://chat?number= 380661389781" target="_blank">
+                            <img src="/image/icon/viber-logo-14126.svg" alt="viber">
+                        </a></li>
+                        <li class="social-instagram"><a href="https://www.instagram.com/crafto_pryanik/" target="_blank">
+                            <img src="/image/icon/instagram-logo-5544 1instagram_icon.svg" alt="instagram" max-width: 50px;>
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="basket">
+                    <div class="basket_icon">
+                        <a href="#">
+                            <img src="/image/icon/backet.svg" alt="backet">                            
+                        </a>
+                        <p class= "basket_text">Кошик</p>
+                    </div>
+                    <div class="basket_items " id="basket_items_count" >0</div>             
+                   
+                </div>
+            </div>
+        </div>
+    </header>
+  
+    <section class="section">
+        <div class="container">
+            <div class="header_body">
+                <div class="page">
+                    <div class="title">
+                        <h1 class="h1_title">Імбирні пряники на замовлення з натуральних інгредієнтів:</h1> 
+                        <p class="p_title">замовляйте унікальні пряники на нашому сайті</p>   
+                    </div>                
+                    <a class="button_top" onclick="openModal()" href="#"><span>Лишити замовлення</span>  </a>                 
+                </div>                
+                <div class="pryanik-slider">
+                    <img src="https://malevich.evo.run/img?url=https://images.crafta.ua/products/5823756" alt="" class="pryakin-slider__item">
+                    <img src="https://shuba.life/static/content/thumbs/740x493/c/e2/hw4ywr---c740x493x50px50p-c740x493x50px50p-up--2c417b667ffc210f12deb0a39bbdfe2c.jpg" alt="" class="pryakin-slider__item">
+                    <img src="https://domovenok-art.ru/wp-content/uploads/2018/11/imbirnye-pryaniki-super-recept.jpg" alt="" class="pryakin-slider__item">
+                </div>
+                            
+            </div>            
+        </div>
+    </section>
+
+    <section class="catalog">
+        <div class="container">               
+            <div class="catalog_text">
+                    <h2>Каталог</h2>
+           </div>           
+                <div class="catalog_cart">
+
+                    <div class="cart" data-id ="01">
+                        <a href="/product.html"><img class="cart_img" src="/image/cart_1.jpg" alt="pryanik"></a>
+                        <div class="catalog-box_category">
+                            <div class="number_cart">Пряник №1</div>
+                            <div class="info_cart">Під замовлення</div>
+                            <div class="price_cart">350 грн</div>                            
+                            <button class="price_add" id="price_open" data-cart="btn_add">У кошик</button>                                        
+                        </div>                    
+                    </div>
+
+                    <div class="cart" data-id ="02">
+                        <a href="/product.html"><img class="cart_img" src="/image/cart_1.jpg" alt="pryanik"></a>
+                        <div class="catalog-box_category">
+                            <div class="number_cart">Пряник №2</div>
+                            <div class="info_cart info_cart_one">В наявності</div>
+                            <div class="price_cart">350 грн</div> 
+                            <button class="price_add" id="price_open" data-cart="btn_add">У кошик</button>                       
+                        </div>                    
+                    </div>
+
+                    <div class="cart" data-id ="03">
+                        <a href="/product.html"><img class="cart_img" src="/image/cart_1.jpg" alt="pryanik"></a>
+                        <div class="catalog-box_category">
+                            <div class="number_cart">Пряник №3</div>
+                            <div class="info_cart">Під замовлення</div>
+                            <div class="price_cart">350 грн</div> 
+                            <button class="price_add" id="price_open" data-cart="btn_add">У кошик</button>                       
+                        </div>                    
+                    </div>
+
+                    <div class="cart" data-id ="04">
+                        <a href="/product.html"><img class="cart_img" src="/image/cart_1.jpg" alt="pryanik"></a>
+                        <div class="catalog-box_category">
+                            <div class="number_cart">Пряник №4</div>
+                            <div class="info_cart info_cart_one">В наявності</div>
+                            <div class="price_cart">350 грн</div> 
+                            <button class="price_add" id="price_open" data-cart="btn_add">У кошик</button>                       
+                        </div>                    
+                    </div>
+
+                    <div class="cart" data-id ="05">
+                        <a href="/product.html"><img class="cart_img" src="/image/cart_1.jpg" alt="pryanik"></a>
+                        <div class="catalog-box_category">
+                            <div class="number_cart">Пряник №5</div>
+                            <div class="info_cart">Під замовлення</div>
+                            <div class="price_cart">350 грн</div> 
+                            <button class="price_add" id="price_open" data-cart="btn_add">У кошик</button>                       
+                        </div>                    
+                    </div>
+
+                    <div class="cart" data-id ="06">
+                        <a href="/product.html"><img class="cart_img" src="/image/cart_1.jpg" alt="pryanik"></a>
+                        <div class="catalog-box_category">
+                            <div class="number_cart">Пряник №6</div>
+                            <div class="info_cart info_cart_one">В наявності</div>
+                            <div class="price_cart">350 грн</div> 
+                            <button class="price_add" id="price_open" data-cart="btn_add">У кошик</button>                       
+                        </div>                    
+                    </div>
+
+                    <div class="cart" data-id ="07">
+                        <a href="/product.html"><img class="cart_img" src="/image/cart_1.jpg" alt="pryanik"></a>
+                        <div class="catalog-box_category">
+                            <div class="number_cart">Пряник №7</div>
+                            <div class="info_cart">Під замовлення</div>
+                            <div class="price_cart">350 грн</div> 
+                            <button class="price_add" id="price_open" data-cart="btn_add">У кошик</button>                       
+                        </div>                    
+                    </div>
+
+                    <div class="cart" data-id ="08">
+                        <a href="/product.html"><img class="cart_img" src="/image/cart_1.jpg" alt="pryanik"></a>
+                        <div class="catalog-box_category">
+                            <div class="number_cart">Пряник №8</div>
+                            <div class="info_cart info_cart_one">В наявності</div>
+                            <div class="price_cart">350 грн</div> 
+                            <button class="price_add" id="price_open" data-cart="btn_add">У кошик</button>                       
+                        </div>                    
+                    </div>
+
+                    <div class="cart" data-id ="09">
+                        <a href="/product.html"><img class="cart_img" src="/image/cart_1.jpg" alt="pryanik"></a>
+                        <div class="catalog-box_category">
+                            <div class="number_cart">Пряник №9</div>
+                            <div class="info_cart info_cart_one">В наявності</div>
+                            <div class="price_cart">350 грн</div> 
+                            <button class="price_add" id="price_open" data-cart="btn_add">У кошик</button>                       
+                        </div>                    
+                    </div>
+
+                    <div class="cart" data-id ="010">
+                        <a href="/product.html"><img class="cart_img" src="/image/cart_1.jpg" alt="pryanik"></a>
+                        <div class="catalog-box_category">
+                            <div class="number_cart">Пряник №10</div>
+                            <div class="info_cart">Під замовлення</div>
+                            <div class="price_cart">350 грн</div> 
+                            <button class="price_add" id="price_open" data-cart="btn_add">У кошик</button>                       
+                        </div>                    
+                    </div>
+
+                    <div class="cart" data-id ="011">
+                        <a href="/product.html"><img class="cart_img" src="/image/cart_1.jpg" alt="pryanik"></a>
+                        <div class="catalog-box_category">
+                            <div class="number_cart">Пряник №11</div>
+                            <div class="info_cart">Під замовлення</div>
+                            <div class="price_cart">350 грн</div> 
+                            <button class="price_add" id="price_open" data-cart="btn_add">У кошик</button>                       
+                        </div>                    
+                    </div>
+
+                    <div class="cart" data-id ="012">
+                        <a href="/product.html"><img class="cart_img" src="/image/cart_1.jpg" alt="pryanik"></a>
+                        <div class="catalog-box_category">
+                            <div class="number_cart">Пряник №12</div>
+                            <div class="info_cart">Під замовлення</div>
+                            <div class="price_cart">350 грн</div> 
+                            <button class="price_add" id="price_open" data-cart="btn_add">У кошик</button>                       
+                        </div>                    
+                    </div>
+
+                    <div class="cart" data-id ="013">
+                        <a href="/product.html"><img class="cart_img" src="/image/cart_1.jpg" alt="pryanik"></a>
+                        <div class="catalog-box_category">
+                            <div class="number_cart">Пряник №13</div>
+                            <div class="info_cart">Під замовлення</div>
+                            <div class="price_cart">450 грн</div> 
+                            <button class="price_add" id="price_open" data-cart="btn_add">У кошик</button>                       
+                        </div>                    
+                    </div>
+
+                    <div class="cart" data-id ="014">
+                        <a href="/product.html"><img class="cart_img" src="/image/cart_1.jpg" alt="pryanik"></a>
+                        <div class="catalog-box_category">
+                            <div class="number_cart">Пряник №14</div>
+                            <div class="info_cart">Під замовлення</div>
+                            <div class="price_cart">350 грн</div> 
+                            <button class="price_add" id="price_open" data-cart="btn_add">У кошик</button>                       
+                        </div>                    
+                    </div>
+
+                    <div class="cart" data-id ="015">
+                        <a href="/product.html"><img class="cart_img" src="/image/cart_1.jpg" alt="pryanik"></a>
+                        <div class="catalog-box_category">
+                            <div class="number_cart">Пряник №15</div>
+                            <div class="info_cart">Під замовлення</div>
+                            <div class="price_cart">350 грн</div> 
+                            <button class="price_add" id="price_open" data-cart="btn_add">У кошик</button>                       
+                        </div>                    
+                    </div>
+
+                    <div class="cart" data-id ="016">
+                        <a href="/product.html"><img class="cart_img" src="/image/cart_1.jpg" alt="pryanik"></a>
+                        <div class="catalog-box_category">
+                            <div class="number_cart">Пряник №16</div>
+                            <div class="info_cart">Під замовлення</div>
+                            <div class="price_cart">340 грн</div> 
+                            <button class="price_add" id="price_open" data-cart="btn_add">У кошик</button>                       
+                        </div>                    
+                    </div>
+                                                  
+            
+        </div>                      
+        </div>
+    </section>
+
+    <div class="footer">
+       <div class="container">            
+             <div class="logo_text">
+                <a href="/">
+                <h3>Crafto</h3>
+                </a>
+                 <p class="logo-text_footer">пряник</p>      
+            </div>           
+
+            <nav class="nav_footer ">
+                <ul class="ul_nav">
+                    <li class="li_nav li_footer"><a href="#">Продукуія</a></li>                    
+                    <li class="li_nav li_footer"><a href="#">Пряники</a></li>
+                    <li class="li_nav li_footer"><a href="#">Відгуки</a></li>
+                    <li class="li_nav li_footer"><a href="/dostavka.html">Оплата та доставка</a></li>                        
+                </ul>
+            </nav>
+            <div class="tel_footer tel_bottom">
+                <div class="social-block">
+                    <div class="tel-block">
+                        <a href="tel:+380661389781" class="telephone">+38 (066) 138 97 81</a>
+                    </div>
+                    <ul class="social-menu">
+                        <li class="social-viber"><a href="viber://chat?number=+380661389781" target=_blank"><img src="/image/icon/viber-logo-14126.svg" alt="viber"></a></li>
+                        <li class="social-instagram"><a href="https://www.instagram.com/crafto_pryanik/" target="_blank"><img src="/image/icon/instagram-logo-5544 1instagram_icon.svg" alt="instagram" max-width: 50px;></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="crafto">
+                <p>© 2023 Кондитерські вироби "Крафто-пряник".</p>
+                <p>Розробив <a href="https://www.facebook.com/profile.php?id=100007763801388">Serhiy Kuznyak</a></p>
+            </div>
+            
+       </div> 
+    </div> 
+
+    <div id="modal_box" class="modal">
+        <div class="modal__box">
+            <form class="telegram-form">
+                <div onclick="closeModal()" class="xrest">&#10006</div>
+                <h2>Хочу пряник</h2>
+                <div class="content__box" ><span>*</span> Ім'я</div>
+                <div class="input__box"><input class="form_control" id="user_name" type="text" name="name" required></div>
+                <div class="content__box" ><span>*</span> Телефон</div>
+                <div class="input__box" ><input class="form_control" id="user_tel" type="tel" name="phone" required value="+380 " ></input></div>
+                <div class="content__box" >Коментар</div>
+                <textarea class="form_control" name="text" id="textarea"></textarea>
+                <div class="errorMess"></div>
+                <div class="button__box">                    
+                    <div onclick="closeModal()" class="btn__box"><span>Скасувати</span></div>
+                    <div id="btn__box" class="btn__box"><input type="submit"></div>
+                    </div>                
+            </form>            
+        </div>
+       </div>
+
+       <div class="model">
+            <div class="model_basket">
+                <h3>Ваше замовлення</h3>
+                <div class="model_header">
+                    <div class="model_goods">Товар</div>
+                    <div class="model_number">Кількість</div>
+                    <div class="model_price">Ціна / грн</div>                   
+                </div> 
+                <div class="backet_close">Ваш кошик порожній.</div> 
+                <div class="cartPrice"></div>                
+                <div class="btn_form"> 
+                    <div class="btn_one">
+                        <div class="close_model" onclick="closeModal()"><span>Продовжити покупки</span></div>
+                    <a><div class="btn_add"><a href="/basket.html"><span>Оформити замовлення</span></a></div> </a>
+                    </div>           
+                    <div class="all__calc">
+                        Повна сума до сплати<br><span class="total__calc">0 </span><span class="grn"> грн</span>
+                    </div>                                                      
+                </div>                  
+               
+                                       
+            </div>     
+                     
+        </div>
+
+       </div>
+
+    </div>
+    <script src="/js/calcCartPrice.js"></script>
+    <script src="/js/basketItems.js"></script>   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>    
+    <script src="/js/slider.js"></script>
+    <script src="/js/slick.min.js"></script>
+    <script src="/js/form.js"></script> 
+    <script src="js/script.js"></script>
+    <script src="/js/localStorage.js"></script>    
+    <script src="/js/toggleCartStatus.js"></script>    
+</body>
+</html>

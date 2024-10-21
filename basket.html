@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Імбирні пряники ручної роботи на заказ. Crafto-пряник</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="top_wrapper">
+                <div class="logo">
+                    <a href="/">
+                        <img src="/image/logo.svg" alt="logo">
+                    </a> 
+                    <div class="logo_text">
+                        <a href="/">
+                            <h3>Crafto</h3>
+                        </a>
+                        <p>пряник</p>      
+                    </div>                                    
+                </div>
+                                
+                <nav class="nav">
+                    <ul class="ul_nav">
+                        <li class="li_nav"><a href="/index.html">Продукція</a></li>                    
+                        <li class="li_nav"><a href="#">Пряники</a></li>
+                        <li class="li_nav"><a href="#">Відгуки</a></li>
+                        <li class="li_nav"><a href="dostavka.html">Оплата та доставка</a></li>                        
+                    </ul>
+                </nav>                
+                <div class="social-block">
+                    <div class="tel-block">
+                        <a href="tel:+380661389781" class="telephone">+38 (066) 138 97 81</a>
+                    </div>
+                    <ul class="social-menu">
+                        <li class="social-viber"><a href="viber://chat?number=crafto_pryanik" target="_blank">
+                            <img src="/image/icon/viber-logo-14126.svg" alt="viber">
+                        </a></li>
+                        <li class="social-instagram"><a href="https://www.instagram.com/crafto_pryanik/" target="_blank">
+                            <img src="/image/icon/instagram-logo-5544 1instagram_icon.svg" alt="instagram" max-width: 50px;>
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="basket">
+                    <div class="basket_icon">
+                        <a href="#">
+                            <img src="/image/icon/backet.svg" alt="backet">                            
+                        </a>
+                        <p class= "basket_text">Кошик</p>
+                    </div>
+                    <div class="basket_items " id="basket_items_count" >0</div>             
+                   
+                </div>
+            </div>
+        </div>
+    </header> 
+    <div class="basket_finish">                      
+        <h3>Ваше замовлення</h3>
+            <div class="model_header">
+                <div class="model_goods">Товар</div>
+                <div class="model_number">Кількість</div>
+                <div class="model_price">Ціна / грн</div>                   
+            </div> 
+            <div class="backet_close" text-align="center">Кошик порожній.</div> 
+            <div class="cartPrice cart_price_finish"></div>
+            <div class="all__calc all__calc__top">
+                Всього:<br><span class="total__calc total__calc__top">0 </span><span class="grn grn_top"> грн</span>
+            </div>  
+            <div class="basket_form_section">
+                    <h3>Форма для оформлення замовлення</h3>
+                    <div class="content_box_form" ><span>*</span> Ім'я та прізвище</div>
+                    <div class="input_box_form"><input class="form_control" id="user_name" type="text" name="name" required></div>
+                    <div class="content_box_form" ><span>*</span> Телефон</div>
+                    <div class="input_box_form" ><input class="form_control" id="user_tel" type="tel" name="phone" required value="+380 " ></input></div>
+                    <div class="content_box_form" >Коментар</div>
+                    <textarea class="input_box_form" name="text" id="input_box_form"></textarea>
+                    <div class="content_box_form" >Спосіб оплати</div>
+                    <select class="input_box_form" name="react-dropdown" id="react-dropdown">
+                        <option value="1">Післяплата</option>
+                        <option value="2">Карткою Visa/MasterCard</option>
+                    </select>
+            </div>
+            <div class="basket_np">
+                <h3>Доставка</h3>                
+                <div class="BasketFormDelivery">
+                    <input class="radio_box" type="radio" name="delivery" value="himself" id="NOVAPOSHTA_PICHUP_1"  checked> 
+                    <label class="Radio_label" for="NOVAPOSHTA_PICHUP_1"><span> Нова Пошта (відділення)</span></label>        
+                </div>
+                <!-- <div class="BasketFormDelivery">
+                    <input class="radio_box" type="radio" name="delivery" value="himself" id="NOVAPOSHTA_COURIER_2"> 
+                    <label class="Radio_label" for="NOVAPOSHTA_COURIER_2"><span> Нова Пошта (кур'єр)</span></label>        
+                </div>    -->
+                <div class="BasketFormDelivery">
+                    <input class="radio_box radio__check" type="radio" name="delivery" value="himself" id="PICKUP">
+                    <label class="Radio_label" for="PICKUP"><span> Самовивіз (Гусятин)</span></label>                    
+                </div>
+                <form id="deliveryForm" class="deliveryForm">
+                    <label for="city">Місто-селище:</label><br>
+                    <input id="city" class="cityName" list="cityList"><br>
+                    <datalist id="cityList"></datalist><br>
+                    <label for="branch">Відділення:</label><br>
+                    <select id="branch" class="cityName"></select><br>                    
+                </form>                                        
+             </div> 
+
+            <div class="btn_form"> 
+                <div class="btn_one">
+                    <div class="close_model" onclick="closeModal()"><span>Продовжити покупки</span></div>
+                <a><div class="btn_add"><span>Оформити замовлення</span></div></a>
+                </div>           
+                <div class="all__calc">
+                    Повна сума до сплати<br><span class="total__calc">0 </span><span class="grn"> грн</span>
+                </div>                                                      
+           </div>              
+                                          
+              
+    </div>
+       
+    <div class="footer">
+        <div class="container">            
+              <div class="logo_text">
+                 <a href="/">
+                 <h3>Crafto</h3>
+                 </a>
+                  <p class="logo-text_footer">пряник</p>      
+             </div>           
+ 
+             <nav class="nav_footer ">
+                 <ul class="ul_nav">
+                     <li class="li_nav li_footer"><a href="/index.html">Продукуія</a></li>                    
+                     <li class="li_nav li_footer"><a href="#">Пряники</a></li>
+                     <li class="li_nav li_footer"><a href="#">Відгуки</a></li>
+                     <li class="li_nav li_footer"><a href="/dostavka.html">Оплата та доставка</a></li>                        
+                 </ul>
+             </nav>
+             <div class="tel_footer tel_bottom">
+                 <div class="social-block">
+                     <div class="tel-block">
+                         <a href="tel:+380661389781" class="telephone">+38 (066) 138 97 81</a>
+                     </div>
+                     <ul class="social-menu">
+                         <li class="social-viber"><a href="viber://chat?number=+380661389781" target=_blank"><img src="/image/icon/viber-logo-14126.svg" alt="viber"></a></li>
+                         <li class="social-instagram"><a href="https://www.instagram.com/crafto_pryanik/" target="_blank"><img src="/image/icon/instagram-logo-5544 1instagram_icon.svg" alt="instagram" max-width: 50px;></a></li>
+                     </ul>
+                 </div>
+             </div>
+             <div class="crafto">
+                 <p>© 2023 Кондитерські вироби "Крафто-пряник".</p>
+                 <p>Розробив <a href="https://www.facebook.com/profile.php?id=100007763801388">Serhiy Kuznyak</a></p>
+             </div>
+             
+        </div> 
+     </div> 
+    
+    </div>
+    <div class="model">
+        <div class="model_basket" >
+            <h3>Ваше замовлення</h3>
+            <div class="model_header">
+                <div class="model_goods">Товар</div>
+                <div class="model_id">ID</div>
+                <div class="model_number">Кількість</div>
+                <div class="model_price">Ціна / грн</div>                   
+            </div>
+            <div class="model_body">
+                <div class="model_info">
+                    <div class="model_img"><img src="/image/cart_1.jpg" alt="pryanik"></div>
+                    <div class="model_title">Пряник №16</div>                        
+                </div>
+                <div class="cart_id">01</div>
+                <div class="counter-wrapper">
+                      <div class="item__control_m" data-action ="minus">-</div>
+                      <div class="item__current" data-counter>1</div> 
+                      <div class="item__control_p" data-action ="plus">+</div>    
+                </div>
+                <div class="cart_price">100</div>
+            </div>
+            <div class="all__calc">
+                Всього: <span class="total__calc">0</span> <span>Грн</span>
+            </div>
+            
+
+        </div>
+    </div>
+    <script src="/js/calcCartPrice.js"></script>
+    <script src="/js/basketItems.js"></script>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> 
+    <script src="/js/form.js"></script> 
+    <script src="/js/basket.js"></script>
+    <script src="/js/script.js"></script> 
+    <script src="/js/localStorage.js"></script>    
+</body>
+</html>
